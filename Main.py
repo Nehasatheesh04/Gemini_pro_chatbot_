@@ -1,10 +1,10 @@
 import os
 import streamlit as st
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from google import genai
 
 # Load environment variables
-load_dotenv()
+#load_dotenv()
 
 # Configure Streamlit
 st.set_page_config(
@@ -14,7 +14,9 @@ st.set_page_config(
 )
 
 # Get API key
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+#GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+
 if not GOOGLE_API_KEY:
     st.error("⚠️ GOOGLE_API_KEY not found in .env file.")
     st.stop()
