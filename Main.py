@@ -13,7 +13,7 @@ st.set_page_config(
     layout="centered",
 )
 
-# Get API key
+# Get API keyy
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
     st.error("⚠️ GOOGLE_API_KEY not found in .env or secrets.")
