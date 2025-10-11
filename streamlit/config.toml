@@ -55,3 +55,8 @@ gatherUsageStats = true
 # Port that the browser should use to connect to the server when in liveSave mode.
 # Default: whatever value is set in server.port.
 serverPort = 80
+
+[runner]
+# Forces the environment to use a stable Python version (e.g., 3.11)
+# This should resolve the incompatibility issue with older dependencies.
+python_version = "3.11"
